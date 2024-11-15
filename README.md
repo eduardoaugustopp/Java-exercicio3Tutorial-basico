@@ -1,9 +1,7 @@
 <h1 align="center">JAVA BÁSICO</h1>
 
-<h3 align="center"> Peguei alguns conteúdos do canal do YouTube: <a href="https://www.youtube.com/watch?v=sTX0UEplF54&list=PLHz_AreHm4dkI2ZdjTwZA4mPMxWTfNSpR&index=1">Gustavo Guanabara
+<h3 align="center"> Canal do YouTube: <a href="https://www.youtube.com/watch?v=sTX0UEplF54&list=PLHz_AreHm4dkI2ZdjTwZA4mPMxWTfNSpR&index=1">Gustavo Guanabara
 </a> </h3>
-
-**(...) continua -> Curso de Java #11 - Estruturas de Repetição (Parte 1)**
 
 > _Eu fiz com Eclipse_
 
@@ -324,8 +322,7 @@ public class ExemploSimples {
 > <img alt="" src="./img/operadoresatribuicao.png"> </br>
 
 > Classe Math
-> <img alt="" src="./img/math.png"> </br>
-> <img alt="" src="./img/arredondamentos.png"> </br>
+> <img alt="" src="./img/math.png"> </br> > <img alt="" src="./img/arredondamentos.png"> </br>
 
 - Math.random -> gera um número entre 0.0 a 1.0.
 
@@ -411,8 +408,7 @@ public class ExemploSimples {
 - Para objetos em vez utilizar ==, utiliza equals, serve para qualquer classes envólucras.
 
 > Operadores Lógicos
-> <img alt="" src="./img/operadoreslogicos.png">
-> <img alt="" src="./img/tabela.png">
+> <img alt="" src="./img/operadoreslogicos.png"> > <img alt="" src="./img/tabela.png">
 
 ```
 		 int x, y, z;
@@ -469,7 +465,312 @@ public class ExemploSimples {
 - default -> tipo padrão caso nenhum desses de cima seja escolhido pelo switch o tipo é "ET"; como é a ultima não precisa do break.
   <img alt="" src="./img/multipla2.png">
 
-**(...) continua -> Curso de Java #11 - Estruturas de Repetição (Parte 1)**
+> <img alt="" src="./img/repeticao.png">
+> <img alt="" src="./img/repeticao2.png">
+
+```
+	int cc = 1;
+	while (cc<=4) {
+	System.out.println("Cambalhota " + cc);
+	cc++;
+	}
+```
+
+> <img alt="" src="./img/fluxo.png">
+
+- O 'continue' interrompe o fluxo natural e volta para 'while';
+
+```
+		int cc = 1;
+		while (cc<5) {
+			cc++;
+
+			if (cc == 1 || cc == 3 || cc == 5) {
+				continue;
+			}
+			System.out.println("Cambalhota " + cc);
+		}
+        SAÍDA : Cambalhota 2
+                Cambalhota 4
+```
+
+> break -> vai jogar pra fora do laço, interrompendo a execução mesmo não tendo saído pela clásula não;
+> <img alt="" src="./img/break.png">
+
+```
+		int cc = 1;
+		while (cc<5) {
+			cc++;
+			if (cc == 1 || cc == 2 ) {
+				continue;
+			}
+			if (cc == 4) {
+				break;
+			}
+			System.out.println("Cambalhota " + cc);
+		}
+        SAÍDA : Cambalhota 3
+```
+
+> Teste lógico no final e no início:
+> <img alt="" src="./img/repeticao3.png">
+
+- CC<4 - > utilizando o enquanto while;
+- CC>=4 - > estrutura repita, é a mesma coisa só que primeiro executa os comando e depois testa, while de cabeça pra baixo;
+
+> <img alt="" src="./img/repeticao4.png">
+> <img alt="" src="./img/enquanto.png">
+> </br>
+
+> O 'do' é útil quando você precisa que o código seja executado pelo menos uma vez.
+> <img alt="" src="./img/enquanto2.png">
+
+```
+			int cc = 0;
+			do {
+				System.out.println(cc);
+				cc++;
+			} while (cc<4);
+```
+
+```
+		int n, s = 0;
+		String resp;
+		Scanner teclado = new Scanner(System.in);
+		do {
+			System.out.print("Digite um número: ");
+			n = teclado.nextInt();
+			s += n; // S = S + n;
+			System.out.print("Quer continuar? [S/N] ");
+			resp = teclado.next();
+		} while (resp.equals("S"));
+		System.out.println("A soma de todos os valores é " + s);
+	SAÍDA:  Digite um número: 2
+            Quer continuar? [S/N] S
+            Digite um número: 3
+            Quer continuar? [S/N] S
+            Digite um número: 5
+            Quer continuar? [S/N] N
+            A soma de todos os valores é 10
+```
+
+> Repetição com variável -> as estruturas de repetição com variáveis de controle já fazem o looping, incremento ou decremento automático;
+
+- Tem uma delimitação de quantas vezes ele vai fazer e qual será o passo de incremento, isso tudo voltando.
+  > Estrutura PARA; o 'for' é um enquanto simplificado;
+  > <img alt="" src="./img/para.png"> ><img alt="" src="./img/para2.png">
+
+```
+		for (int cc = 0; cc<4; cc++) {
+			System.out.println("Cambalhota");
+		}
+```
+
+- Começar em 15, enquanto ele for maior igual a 5, ele tira 2:
+
+```
+		for (int cc = 15; cc>=5; cc-=2) {
+			System.out.println(cc);
+		}
+        SAÍDA : 15
+                13
+                11
+                9
+                7
+                5
+
+```
+
+> Laço Aninhado -> aninhado é um dentro do outro como se fosse um ninho
+
+- Quando tem um laço dentro do outro, retorna o laço de dentro, não para o de fora, então ele voltou para J;
+  > <img alt="" src="./img/aninhados.png">
+  > </br>
+
+> Vetores
+> <img alt="" src="./img/vetores.png">
+
+- Quando utiliza o bloco assim também cria um objeto, o vetor 'n' é um objeto com características, propriedades, atributos, funções e métodos;
+
+```
+		int n[] = {3,2,8,7,5,4};
+		System.out.println("Total de casas de N " + n.length);// como é um objeto é só colocar ponto e ver todos os métodos com () e o atributo ou caracteristica sem () que é o length = comprimento
+		for (int c=0; c<=5; c++)
+			System.out.println("Na posição " + c + " temos o valor " + n[c] );
+
+            SAÍDA:
+               Total de casas de N 6
+               Na posição 0 temos o valor 3
+               Na posição 1 temos o valor 2
+               Na posição 2 temos o valor 8
+               Na posição 3 temos o valor 7
+               Na posição 4 temos o valor 5
+               Na posição 5 temos o valor 4
+```
+
+- Com esse 'for' cria uma estrutura de repetição genérica, ela funciona para qualquer vetor de qualquer tamanho:
+
+```
+    for (int c=0; c<=n.length-1; c++)
+```
+
+- Vetor mes (com 12 posições) -> mes vai ser uma instância da classe string com a declaração de todos os meses dentro do bloco:
+
+> <img alt="" src="./img/vetores2.png">
+
+```
+		String mes[] = { "Jan", "Fev", "Mar", "Abr", "Mai", "Jun", "Jul", "Ago", "Set", "Out", "Nov", "Dez" };
+		int tot[] = { 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
+		for (int c = 0; c < mes.length; c++) {
+			System.out.println("O mês de " + mes[c] + " tem " + tot[c] + " dias ao todo.");
+		}
+```
+
+> Foreach ou Para cada -> funciona exclusivamente para coleções para vetores;
+
+- for é uma repetição para cada um deles; vai ter uma variável inteira que vai receber o valor dentro de cada passagem e ':'; vai ter 2 elementos, uma váriavel(valor) do tipo int que precisa ter o mesmo tipo do vetor e depois coloca o nome do vetor; a partir de agora a cada laço vai ter uma variável valor que vai ser o valor;
+
+  > <img alt="" src="./img/foreach.png">
+
+- Para cada elemento de v coloque dentro de valor; não precisa trabalhar mais com vetor, ele joga isso dentro da variável double:
+
+```
+double v[] = {3.5, 2.75, 9, -4.75};
+		for (double valor:v) {
+			System.out.print(valor + " ");
+		}
+```
+
+> Colocando em ordem
+
+- Arrays é uma classe que está dentro da biblioteca java.util;
+
+```
+		double v[] = {3.5, 2.75, 9, -4.75};
+		Arrays.sort(v);
+		for (double valor:v) {
+			System.out.print(valor + " ");
+		}
+        SAÍDA : -4.75 2.75 3.5 9.0
+```
+
+> Busca dentro do vetor
+> <img alt="" src="./img/binary.png">
+
+```
+		int vet [] = {3, 7, 6, 1, 9, 4, 2};
+		for(int v:vet) {
+			System.out.print(v + " ");
+		}
+		System.out.println(" ");
+		int p = Arrays.binarySearch(vet, 1);
+		System.out.println("Encontrei o valor na posição " + p);
+		SAÍDA: 3 7 6 1 9 4 2
+			   Encontrei o valor na posição 3
+```
+
+- Se colocar um indice que não tem, vai apresentar um valor negativo da chave porque não existe valor negativo de indice. ex.: acima não tem indice 8 e a saída ficaria -8;
+
+> Preenchimento do vetor automatico -> Se quiser que todos elementos desse vetor fiquem com o mesmo valor;
+
+> <img alt="" src="./img/preenchimento.png">
+
+```
+		int v[] = new int[20];
+		Arrays.fill(v, 0);
+		for(int valor: v) {
+			System.out.print(valor + " ");
+		}
+```
+
+> Rotinas
+> <img alt="" src="./img/procedimento.png">
+
+- 'void' é um procedimento, não retorna nada; o 'main' é um método uma rotina que não vai retornar valores, que vai receber um argumento, que é um vetor como parâmetro de 'String', que é um método estático 'static' e um método 'public':
+
+```
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+	}
+```
+
+> <img alt="" src="./img/procedimento2.png">
+
+- Criando um procedimento de soma com dois parâmetros A e B do tipo inteiro.
+- Sempre que apertar play o método que é executado por padrão é o 'main', se quiser fazer uma chamada para soma, tem que chamar dentro do 'main';
+- O método 'main' é estático, o método estático serve para classe não para uma instância, então não pode chamar um procedimento dentro de um método estático, se esse procedimento tambem não for estático;
+- Quando coloca a palavra 'static' na frente de um método, torna ele estático, esse método fica apenas funcional dentro da classe, isso é ele não faz parte de um instanciamento de objeto;
+  > <img alt="" src="./img/erro.png">
+
+```
+	static void soma(int a, int b) {
+		int s = a + b;
+		System.out.println("A soma é " + s);
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.out.println("Começou o programa");
+		soma(5,2);
+			}
+			SAÍDA: Começou o programa
+				   A soma é 7
+```
+
+> Método com retorno
+
+- Identifica um método através da palavra 'void' que não tem retorno ou do tipo primitivo estabelecido(no exercicio 'int');
+  > <img alt="" src="./img/funcoes.png">
+- Quem cuido da exibição foi o método principal e não o método do cálculo, o método do cálculo fico responsável só pelo cáculo, isso é uma boa pratica, não criar um sistema engessado, cria funções que retornam valor e o próprio código vai tratar da melhor maneira;
+
+```
+	static int soma(int a, int b) {
+		int s = a + b;
+		return s;
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.out.println("Começou o programa");
+		int sm = soma(5,2);
+		System.out.println("A soma vale " + sm);
+
+	}
+		SAÍDA: Começou o programa
+			   A soma vale 7
+```
+
+> Exemplo múltiplas classes no mesmo pacote
+> <img alt="" src="./img/classes.png">
+
+```
+package com.testefuncao02.pacote;
+
+public class Operacoes {
+
+	public static String contador (int i, int f)  {//método que vai retornar uma string
+		String s = ""; //vai iniciar vazio
+		for (int c = i; c <= f; c++)//contar do início ao fim
+		s += c + " ";	//fazer com que s a string receba ele mesmo concatenado com o c e um espaço em branco
+		return s;
+	}
+}
+//Agora precisa chamar esse método mas a chamada esta em outro arquivo
+```
+
+```
+package com.testefuncao02.pacote;
+
+public class TesteFuncao02 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.out.println("Vai começar a contagem");
+		System.out.println(Operacoes.contador(1, 5));
+	}
+} 	 	SAÍDA:Vai começar a contagem
+			  1 2 3 4 5
+```
 
 ## �� Tecnologias
 
