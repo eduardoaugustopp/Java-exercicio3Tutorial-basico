@@ -772,6 +772,599 @@ public class TesteFuncao02 {
 			  1 2 3 4 5
 ```
 
+<h3 align="center"> Canal do YouTube: <a href="https://www.youtube.com/watch?v=VKjFuX91G5Q&list=PL62G310vn6nFIsOCC0H-C2infYgwm8SWW&index=1">DevDojo
+</a> </h3>
+
+---
+
+## Tipos primitivos
+
+```java
+public class ImprimindoVariaveis {
+    public static void main(String[] args) {
+        /* Comentário
+        * de várias
+        * linhas
+        * */
+        //Comentário
+        /***
+         * Comentário de Doc oficial
+         * @param parametro de entrada
+         * */
+
+        int idade = 34;
+        int idadeDosPais = 66;
+        System.out.println("Dados impressos");
+        System.out.println(idade);
+        System.out.println(idadeDosPais);
+        System.out.println("Dados impressos" + idade);
+    }
+}
+
+```
+
+---
+
+```java
+public class RelatorioPendenci {
+    public static void main(String[] args) {
+        String nome = "Bulma";
+        String endereco = "Rua Tal tal tal ";
+        String telefone = "(91)9999-8888";
+        System.out.println("O "+nome+" endereço "+ endereco + " e telefone: "+telefone+ " não possui pendencias");
+    }
+}
+
+```
+
+```java
+public class br.com.abc.introducao.operadores.Operadores {
+    public static void main(String[] args) {
+        int numero1 = 10;
+        int numero2 = 20;
+        int soma = numero1 + numero2;
+        System.out.println(numero1+ numero2+ " Soma antes depois " + numero1 + numero2);
+        System.out.println(numero1+ numero2 + " soma antes");
+        System.out.println("soma depois " + numero1+ numero2);
+        System.out.println("Total " + (numero1/numero2));
+    }
+}
+
+```
+
+---
+
+## Operadores
+
+```java
+public class br.com.abc.introducao.operadores.Operadores {
+    public static void main(String[] args) {
+        System.out.println("Resto da divisão = " + (21 % 2));
+    }
+}
+
+```
+
+```java
+public class br.com.abc.introducao.operadores.OperadoresComparacao {
+    public static void main(String[] args) {
+        boolean dezMaiorQueVinte = 10 > 20;
+        boolean dezMenorQueVinte = 10 < 20;
+
+        System.out.println(dezMaiorQueVinte);
+        System.out.println(dezMenorQueVinte);
+        System.out.println( 5 == 5);
+        System.out.println( 5 != 5);
+    }
+}
+
+```
+
+---
+
+```java
+public class br.com.abc.introducao.operadores.OperadoresLogicos {
+    public static void main(String[] args) {
+        int idade = 18;
+        float salario = 2000f;
+
+        System.out.println(idade >= 16 && salario >= 2000);
+        System.out.println(idade <= 16 && salario >= 2000);
+        System.out.println(idade >= 16 || salario >= 2000);
+    }
+}
+
+```
+
+---
+
+```java
+public class br.com.abc.introducao.operadores.OperadoresAtribuicao {
+    public static void main(String[] args) {
+        // = , -= , += , /= , %=
+
+        int salario = 1000;
+        //salario = salario + 200;
+        //salario += 200;
+        salario = salario + (int)(salario * 0.2);
+        int numero = 11;
+        numero %= 2;
+
+        System.out.println(salario);
+        System.out.println(numero);
+
+    }
+}
+
+```
+
+---
+
+## Controle de fluxo if, else if e else
+
+```java
+public class br.com.abc.introducao.controlefluxo.ControleFluxo1 {
+    public static void main(String[] args) {
+        // idade < 15 categoria infantil
+        // idade >= 15 && idade < 18 juvenil
+        // udade >= 18 adulto
+        int idade = 18;
+        String categoria = "";
+        if(idade < 15){
+            categoria = "Infantil";
+        }else if(idade >= 15 && idade < 18){
+            categoria = "Juvenil";
+        }else{
+            categoria = "Adulto";
+        }
+        System.out.println(categoria);
+
+    }
+}
+
+```
+
+---
+
+## Controle de fluxo: Tabela verdade e mais
+
+```java
+public class br.com.abc.introducao.controlefluxo.ControleFluxo2 {
+    public static void main(String[] args) {
+        int idade = 15;
+        String status;
+        status = idade < 10 ? "Não adulto" : "Adulto";
+        System.out.println(status);
+    }
+}
+
+```
+
+---
+
+## Controle de fluxo Resolução do exercício if else
+
+```java
+public class br.com.abc.introducao.controlefluxo.ExercicioControleFluxo {
+    public static void main(String[] args) {
+        /*
+         * Crie uma variável salario e imprima seu imposto
+         * Imposto:
+         * salario < 1000 5%
+         * salario >= 1000 && salario < 2000 10$
+         * salario >= 2000 && salario < 4000 15%
+         * salario > 5000 20%
+         * */
+        double salario = 900;
+        double totalImposto = 0;
+
+        if (salario < 1000) {
+            totalImposto = salario * 0.05;
+        } else if (salario >= 1000 && salario < 2000) {
+            totalImposto = salario * 0.1;
+        } else if (salario >= 2000 && salario < 4000) {
+            totalImposto = salario * 0.15;
+        } else {
+            totalImposto = salario * 0.2;
+        }
+        System.out.println("O total de impostos = " + totalImposto);
+
+    }
+}
+
+```
+
+---
+
+## Controle de fluxo switch e exercícios
+
+```java
+public class br.com.abc.introducao.controlefluxo.ControleFluxo3 {
+    public static void main(String[] args) {
+        byte dia = 2;
+        switch (dia) {
+            case 1:
+                System.out.println("Domingo");
+                break;
+            case 2:
+                System.out.println("Segunda");
+                break;
+            case 3:
+                System.out.println("Terça");
+                break;
+            case 4:
+                System.out.println("Quarta");
+                break;
+            case 5:
+                System.out.println("Quinta");
+                break;
+            case 6:
+                System.out.println("Sexta");
+                break;
+            case 7:
+                System.out.println("Sábado");
+                break;
+            default:
+                System.out.println("Opção Inválida!");
+                break;
+        }
+    }
+}
+
+```
+
+```java
+public class br.com.abc.introducao.controlefluxo.ExercicioControleFluxo3 {
+    /*  Crie um switch que dado um valor de 1 a 7
+    *   considerando 1 domingo imprima se é dia util ou dia de semana
+    */
+}
+
+```
+
+---
+
+## Controle de fluxo - Solução do exercício
+
+```java
+public class br.com.abc.introducao.controlefluxo.ExercicioControleFluxo3 {
+    /*  Crie um switch que dado um valor de 1 a 7
+     *   considerando 1 domingo imprima se é dia util ou dia de semana
+     **/
+    public static void main(String[] args) {
+        byte dia = 7;
+        switch (dia) {
+            case 1:
+            case 7:
+                System.out.println("Final de semana");
+                break;
+            case 2:
+            case 3:
+            case 4:
+            case 5:
+            case 6:
+                System.out.println("Dia Últil");
+                break;
+            default:
+                System.out.println("Opção inválida");
+
+        }
+    }
+}
+
+```
+
+```java
+import java.util.Scanner;
+
+public class br.com.abc.introducao.controlefluxo.ExercicioControleFluxo31 {
+    static void show(String mensagem) {
+        System.out.printf(mensagem + "\n");
+    }
+
+    static Scanner Scanner() {
+        return new Scanner(System.in);
+    }
+
+    public static void main(String[] args) {
+        String[] DiaDaSemana = {"Domingo", "Segunda", "Quarta", "Quinta", "Sexta", "Sábado"};
+        show("Digite um dia da semana");
+
+        int dia = Scanner().nextInt();
+
+        System.out.println();
+
+        switch (dia) {
+            case 0:
+            case 1:
+            case 2:
+            case 3:
+            case 4:
+                show("Dia útil");
+                break;
+            case 5:
+                show("Final de Semana");
+                break;
+            case 6:
+                show("Dia útil");
+                break;
+            default:
+                show("Inválido");
+
+        }
+
+    }
+}
+
+
+```
+
+---
+
+## Controle de fluxo for, while, do while
+
+```java
+public class br.com.abc.introducao.controlefluxo.ControleFluxo04 {
+    public static void main(String[] args) {
+        int contador = 9;
+
+        while(contador < 10){
+            System.out.println(++contador);
+        }
+
+        do{
+            System.out.println("Dentro do DO while");
+        }while (contador < 10);
+
+        for(int i = 0; i < 10; i++){
+            System.out.println("Vador do i =" + i);
+        }
+    }
+}
+
+```
+
+---
+
+## Exercício estrutura de repetição
+
+```java
+public class br.com.abc.introducao.controlefluxo.ControleFluxo04 {
+    public static void main(String[] args) {
+        int contador = 9;
+
+        while (contador < 10) {
+            System.out.println(++contador);
+        }
+        contador = 0;
+        do {
+            System.out.println("Dentro do DO while, cont = " + contador++);
+        } while (contador < 10);
+
+        for (int i = 0; i < 10; i++) {
+            System.out.println("Vador do i =" + i);
+            if (i == 5) {
+                break;
+            }
+        }
+    }
+}
+
+```
+
+```java
+public class br.com.abc.introducao.controlefluxo.ExercicioControleFluxo4 {
+
+    public static void main(String[] args) {
+        // imprima todos os numero pares de 0 até 100000
+
+        int valor = 10000000;
+        for (int i = 0 ; i<= valor ; i++){
+            if(i % 2 == 0){
+                System.out.println(i);
+            }
+        }
+
+    }
+}
+
+```
+
+---
+
+## Comando break and continue
+
+```java
+public class br.com.abc.introducao.controlefluxo.ControleFluxo5 {
+    public static void main(String[] args) {
+        /* Dado um valor de um carro, descubra em quantas vezes ele pode ser parcelado
+         * Porém as parcelas não podem ser menores do que 1.000 */
+
+        double valorTotal = 30000;
+        for(int parcela = 1 ; parcela <= valorTotal ; parcela++){
+            double valorParcela = valorTotal/parcela;
+            if(valorParcela < 1000){
+                break;
+            }
+            System.out.println("Parcela "+ parcela + " R$ "+ valorParcela);
+
+        }
+
+    }
+}
+
+```
+
+```java
+public class br.com.abc.introducao.controlefluxo.ControleFluxo6 {
+    public static void main(String[] args) {
+        /* Dado um valor de um carro, descubra em quantas vezes ele pode ser parcelado
+         * Porém as parcelas não podem ser menores do que 1.000 */
+
+        double valorTotal = 30000;
+        for(int parcela = (int) valorTotal ; parcela >= 1 ; parcela--){
+            double valorPacela = valorTotal / parcela;
+            if(valorPacela <= 1000){
+                continue;
+            }
+            System.out.println("Parcela "+ parcela + " R$ "+ valorPacela);
+
+        }
+
+
+    }
+}
+
+```
+
+---
+
+## Arrays parte 1
+
+```java
+public class br.com.abc.introducao.arrays.Arrays1 {
+    public static void main(String[] args) {
+        int[] idades = new int[3];
+        idades[0] = 10;
+        idades[1] = 1;
+        idades[2] = 30;
+
+        System.out.println("Idade " + idades[0]);
+        System.out.println("Idade " + idades[1]);
+        System.out.println("Idade " + idades[2]);
+    }
+
+}
+
+```
+
+---
+
+## Arrays parte 2
+
+```java
+public class br.com.abc.introducao.arrays.Arrays2 {
+    public static void main(String[] args) {
+        // byte, short, int, long, float, double = 0
+        // char '\u0000' = ' '
+        // boolean false
+        // reference null
+
+        String[] nomes = new String[3];
+        nomes[0] = "Jose";
+        nomes[1] = "Luciana";
+        nomes[2] = "Luan";
+
+        for( int i = 0; i < nomes.length; i++){
+            System.out.println((i+ 1) + " - nome: "+ nomes[i]);
+        }
+
+    }
+}
+
+```
+
+---
+
+## Arrays parte 3 foreach
+
+```java
+public class br.com.abc.introducao.arrays.Arrays3 {
+    public static void main(String[] args) {
+        int[] numeros = new int[5];
+        int[] numeros1 = {1,2,3,4,5}; // tam = 5, index = 0 até 4
+        int[] numweoa3 = new int[]{1,2,3,4,5};
+
+        for(int i = 0; i< numeros1.length; i++){
+            System.out.println(numeros1[i]);
+        }
+
+        for (int num : numweoa3) {
+            System.out.println(num);
+        }
+
+    }
+}
+
+```
+
+```java
+public class br.com.abc.introducao.arrays.Arrays4 {
+    public static void main(String[] args) {
+        String[] nomes = {"jose", "luciana", "Barbosa"};
+        for(String nome : nomes){
+            System.out.println(nome);
+        }
+    }
+}
+
+```
+
+---
+
+## Arrays parte 4 arrays multidimensionais
+
+```java
+public class br.com.abc.introducao.arrays.Arrays5 {
+    public static void main(String[] args) {
+        int[][] dias = new int[2][2];
+        dias[0][0] = 30;
+        dias[0][1] = 31;
+        dias[1][0] = 12;
+        dias[1][1] = 13;
+
+        for (int i = 0 ; i < dias.length; i++ ){
+            System.out.println("End. Mem: " + dias[i]);
+            for (int j = 0; j < dias[i].length; j++) {
+                System.out.println(dias[i][j]);
+            }
+        }
+
+        System.out.println("----------------------");
+
+        for (int[] ref : dias) {
+            System.out.println("End. Mem: " + ref);
+            for (int dia : ref) {
+                System.out.println(dia);
+            }
+        }
+    }
+}
+
+```
+
+---
+
+## Arrays parte 5 arrays multidimencionais
+
+```java
+public class br.com.abc.introducao.arrays.Arrays6 {
+    public static void main(String[] args) {
+        int[] arrInt = {1,2,3};
+        int[] arrInt2 = new int[3];
+        int[] arrInt3 = new int[]{1,2,3};
+
+        /*
+        int[][] dias = new int[3][];
+        dias[0] = new int[2];
+        dias[1] = new int[]{1,2,3};
+        dias[2] = new int[4];
+        */
+
+        int[][] dias = {{0,0},{1,2,3},{0,0,0,0}};
+        // qua é o valor da posição [1,2] = 3
+
+        for(int[] arr : dias){
+            System.out.println("ref: "+ arr);
+            for(int num : arr){
+                System.out.println(num);
+            }
+        }
+    }
+}
+
+```
+
 ## �� Tecnologias
 
 <div>
