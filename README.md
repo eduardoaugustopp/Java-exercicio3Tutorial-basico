@@ -75,7 +75,7 @@ https://gluonhq.com/products/javafx/
 
 **module-info.java**
 
-```xml
+```java
 module olamundojavafx {
     requires javafx.controls;
     requires javafx.fxml;
@@ -86,7 +86,7 @@ module olamundojavafx {
 
 **OlaMundoJavaFx.java**
 
-```xml
+```java
 package olamundojavafx; // Declaração do pacote, onde o arquivo está localizado
 
 import javafx.application.Application; // Importa a classe Application, que é a base para a aplicação JavaFX
@@ -153,7 +153,7 @@ public class OlaMundoJavaFx extends Application { // Declaração da classe 'Ola
 
 - Programação Orientada a Objetos (POO) é um paradigma de programação que se baseia na ideia de que tudo no código é um objeto. Um objeto é uma entidade que tem um estado e um comportamento. No Java, por exemplo, um objeto é uma instância de uma classe. Uma classe é como um modelo para um objeto, onde você pode definir seus atributos e métodos. Os atributos são as características do objeto e os métodos são as ações que o objeto pode executar.
 
-```
+```java
 // Definindo a classe Pessoa - essa classe representa um modelo para criar objetos do tipo Pessoa
 class Pessoa {
     // Atributos da classe (ou características do objeto)
@@ -203,7 +203,7 @@ public class Main {
 - Recebe um argumento: O main recebe um parâmetro chamado args, que é um array de String. Esse array pode ser usado para passar informações para o programa quando ele for iniciado pela linha de comando.
 - **main** é onde o programa começa, e o args pode ser usado para passar informações extras ao programa.
 
-```
+```java
 public class MeuPrograma {
     public static void main(String[] args) {
         System.out.println("Primeiro argumento: " + args[0]);
@@ -222,7 +222,7 @@ Segundo argumento: arg2
 - Os getters e setters no Java são métodos usados para acessar e modificar os valores dos atributos de uma classe. Eles ajudam a proteger e controlar o acesso aos dados de um objeto, permitindo seguir o princípio de encapsulamento.
 - Imagine que você tem uma classe Pessoa com um atributo idade. Em vez de permitir que qualquer código altere a idade diretamente (o que pode causar problemas, por exemplo, se alguém tentar definir uma idade negativa), você usa um getter e um setter. Assim, você controla o acesso e pode garantir que a idade sempre tenha um valor válido.
 
-```
+```java
 public class Pessoa {
     private int idade; // Atributo privado
 
@@ -248,7 +248,7 @@ public class Pessoa {
 > Typecast e Wrapper Class
 > <img alt="" src="./img/tipo.png"> </br>
 
-```
+```java
 public class ExemploSimples {
     public static void main(String[] args) {
         // Typecast (conversão de tipo primitivo)
@@ -294,7 +294,7 @@ public class ExemploSimples {
 
 - O ++ quando vem depois do numero significa utiliza o numero 5 + 5 e depois de fazer essa soma, soma mais um no numero.
 
-```
+```java
     int numero = 5;
 	int valor = 5 + numero++;
 	System.out.println(valor); SAÍDA 1 = 10
@@ -303,7 +303,7 @@ public class ExemploSimples {
 
 - ++numero significa que ele pega 5 e soma com numero ja pré incrementado de unidade.
 
-```
+```java
 	int numero = 5;
 	int valor = 5 + ++numero;
 	System.out.println(valor); SAÍDA 1 = 11
@@ -312,7 +312,7 @@ public class ExemploSimples {
 
 - Tenho o 10, vou tirar 1 e depois vou ter 9.
 
-```
+```java
     int numero = 10;
 	int valor = 4 + numero--;
 	System.out.println(valor); SAÍDA 1 = 14
@@ -326,14 +326,14 @@ public class ExemploSimples {
 
 - Math.random -> gera um número entre 0.0 a 1.0.
 
-```
+```java
     double ale = Math.random();
 	System.out.println(ale);
 ```
 
 - Se quiser gerar um número entre 5 e 10 => 5 + Math.random() \* (10 - 5). Outro exemplo entre 0 e 9, substitui 5 por 0 e 9 por 10.
 
-```
+```java
     double ale = Math.random();
 	int n = (int) (5 + ale * (10-5));
 	System.out.println(n);
@@ -345,7 +345,7 @@ public class ExemploSimples {
 - O primeiro operador é uma expressão, ai coloca a ? e depois coloca qual valor vai ser atribuido caso essa expressão seja verdadeira x ':' e por ultimo coloca o valor que vai ser atribuido caso a expressão seja considerada falsa y.
 - Tem que atribuir um valor para uma mesma variável.
 
-```
+```java
 		int n1, n2, r;
 		n1 = 10;
 		n2 = 8;
@@ -356,7 +356,7 @@ public class ExemploSimples {
 
 - exemplo com fórmulas:
 
-```
+```java
 		int n1, n2, r;
 		n1 = 10;
 		n2 = 8;
@@ -371,7 +371,7 @@ public class ExemploSimples {
 
 - Maneiras diferentes de declarar o mesmo objeto.
 
-```
+```java
         String nome1 = "Gustavo";
 		String nome2 = "Gustavo";
 		String nome3 = new String("Gustavo");
@@ -380,7 +380,7 @@ public class ExemploSimples {
 		System.out.println(res); /*SAÍDA igual; nome1 e nome2 são 2 objetos que tem o mesmo conteúdo, tem a mesma estrutura*/
 ```
 
-```
+```java
 	public static void main(String[] args) {
 		String nome1 = "Gustavo";
 		String nome2 = "Gustavo";
@@ -394,7 +394,7 @@ public class ExemploSimples {
 		*/}
 ```
 
-```
+```java
 		String nome1 = "Gustavo";
 		String nome2 = "Gustavo";
 		String nome3 = new String("Gustavo");
@@ -410,7 +410,7 @@ public class ExemploSimples {
 > Operadores Lógicos
 > <img alt="" src="./img/operadoreslogicos.png"> > <img alt="" src="./img/tabela.png">
 
-```
+```java
 		 int x, y, z;
 		 x = 4;
 		 y = 7;
@@ -426,7 +426,7 @@ public class ExemploSimples {
 > <img alt="" src="./img/simples.png">
 > <img alt="" src="./img/simples2.png">
 
-```
+```java
 		Scanner teclado = new Scanner(System.in);
 		System.out.print("Primeira nota: ");
 		float n1 = teclado.nextFloat();
@@ -441,7 +441,7 @@ public class ExemploSimples {
 > <img alt="" src="./img/composta2.png">
 > <img alt="" src="./img/composta3.png">
 
-```
+```java
 		Scanner t = new Scanner(System.in);
 		System.out.println("Em que ano você nasceu ? ");
 		int nasc = t.nextInt();
@@ -468,7 +468,7 @@ public class ExemploSimples {
 > <img alt="" src="./img/repeticao.png">
 > <img alt="" src="./img/repeticao2.png">
 
-```
+```java
 	int cc = 1;
 	while (cc<=4) {
 	System.out.println("Cambalhota " + cc);
@@ -480,7 +480,7 @@ public class ExemploSimples {
 
 - O 'continue' interrompe o fluxo natural e volta para 'while';
 
-```
+```java
 		int cc = 1;
 		while (cc<5) {
 			cc++;
@@ -497,7 +497,7 @@ public class ExemploSimples {
 > break -> vai jogar pra fora do laço, interrompendo a execução mesmo não tendo saído pela clásula não;
 > <img alt="" src="./img/break.png">
 
-```
+```java
 		int cc = 1;
 		while (cc<5) {
 			cc++;
@@ -525,7 +525,7 @@ public class ExemploSimples {
 > O 'do' é útil quando você precisa que o código seja executado pelo menos uma vez.
 > <img alt="" src="./img/enquanto2.png">
 
-```
+```java
 			int cc = 0;
 			do {
 				System.out.println(cc);
@@ -533,7 +533,7 @@ public class ExemploSimples {
 			} while (cc<4);
 ```
 
-```
+```java
 		int n, s = 0;
 		String resp;
 		Scanner teclado = new Scanner(System.in);
@@ -560,7 +560,7 @@ public class ExemploSimples {
   > Estrutura PARA; o 'for' é um enquanto simplificado;
   > <img alt="" src="./img/para.png"> ><img alt="" src="./img/para2.png">
 
-```
+```java
 		for (int cc = 0; cc<4; cc++) {
 			System.out.println("Cambalhota");
 		}
@@ -568,7 +568,7 @@ public class ExemploSimples {
 
 - Começar em 15, enquanto ele for maior igual a 5, ele tira 2:
 
-```
+```java
 		for (int cc = 15; cc>=5; cc-=2) {
 			System.out.println(cc);
 		}
@@ -592,7 +592,7 @@ public class ExemploSimples {
 
 - Quando utiliza o bloco assim também cria um objeto, o vetor 'n' é um objeto com características, propriedades, atributos, funções e métodos;
 
-```
+```java
 		int n[] = {3,2,8,7,5,4};
 		System.out.println("Total de casas de N " + n.length);// como é um objeto é só colocar ponto e ver todos os métodos com () e o atributo ou caracteristica sem () que é o length = comprimento
 		for (int c=0; c<=5; c++)
@@ -610,7 +610,7 @@ public class ExemploSimples {
 
 - Com esse 'for' cria uma estrutura de repetição genérica, ela funciona para qualquer vetor de qualquer tamanho:
 
-```
+```java
     for (int c=0; c<=n.length-1; c++)
 ```
 
@@ -618,7 +618,7 @@ public class ExemploSimples {
 
 > <img alt="" src="./img/vetores2.png">
 
-```
+```java
 		String mes[] = { "Jan", "Fev", "Mar", "Abr", "Mai", "Jun", "Jul", "Ago", "Set", "Out", "Nov", "Dez" };
 		int tot[] = { 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
 		for (int c = 0; c < mes.length; c++) {
@@ -634,7 +634,7 @@ public class ExemploSimples {
 
 - Para cada elemento de v coloque dentro de valor; não precisa trabalhar mais com vetor, ele joga isso dentro da variável double:
 
-```
+```java
 double v[] = {3.5, 2.75, 9, -4.75};
 		for (double valor:v) {
 			System.out.print(valor + " ");
@@ -645,7 +645,7 @@ double v[] = {3.5, 2.75, 9, -4.75};
 
 - Arrays é uma classe que está dentro da biblioteca java.util;
 
-```
+```java
 		double v[] = {3.5, 2.75, 9, -4.75};
 		Arrays.sort(v);
 		for (double valor:v) {
@@ -657,7 +657,7 @@ double v[] = {3.5, 2.75, 9, -4.75};
 > Busca dentro do vetor
 > <img alt="" src="./img/binary.png">
 
-```
+```java
 		int vet [] = {3, 7, 6, 1, 9, 4, 2};
 		for(int v:vet) {
 			System.out.print(v + " ");
@@ -675,7 +675,7 @@ double v[] = {3.5, 2.75, 9, -4.75};
 
 > <img alt="" src="./img/preenchimento.png">
 
-```
+```java
 		int v[] = new int[20];
 		Arrays.fill(v, 0);
 		for(int valor: v) {
@@ -688,7 +688,7 @@ double v[] = {3.5, 2.75, 9, -4.75};
 
 - 'void' é um procedimento, não retorna nada; o 'main' é um método uma rotina que não vai retornar valores, que vai receber um argumento, que é um vetor como parâmetro de 'String', que é um método estático 'static' e um método 'public':
 
-```
+```java
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 	}
@@ -702,7 +702,7 @@ double v[] = {3.5, 2.75, 9, -4.75};
 - Quando coloca a palavra 'static' na frente de um método, torna ele estático, esse método fica apenas funcional dentro da classe, isso é ele não faz parte de um instanciamento de objeto;
   > <img alt="" src="./img/erro.png">
 
-```
+```java
 	static void soma(int a, int b) {
 		int s = a + b;
 		System.out.println("A soma é " + s);
@@ -723,7 +723,7 @@ double v[] = {3.5, 2.75, 9, -4.75};
   > <img alt="" src="./img/funcoes.png">
 - Quem cuido da exibição foi o método principal e não o método do cálculo, o método do cálculo fico responsável só pelo cáculo, isso é uma boa pratica, não criar um sistema engessado, cria funções que retornam valor e o próprio código vai tratar da melhor maneira;
 
-```
+```java
 	static int soma(int a, int b) {
 		int s = a + b;
 		return s;
@@ -743,7 +743,7 @@ double v[] = {3.5, 2.75, 9, -4.75};
 > Exemplo múltiplas classes no mesmo pacote
 > <img alt="" src="./img/classes.png">
 
-```
+```java
 package com.testefuncao02.pacote;
 
 public class Operacoes {
@@ -758,7 +758,7 @@ public class Operacoes {
 //Agora precisa chamar esse método mas a chamada esta em outro arquivo
 ```
 
-```
+```java
 package com.testefuncao02.pacote;
 
 public class TesteFuncao02 {
