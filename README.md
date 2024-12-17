@@ -628,6 +628,25 @@ public class ExemploSimples {
 
 > Foreach ou Para cada -> funciona exclusivamente para coleções para vetores;
 
+- int: O tipo dos elementos no array.
+- numero: É o identificador que referencia cada elemento do array em cada iteração.
+- numeros: É o array que está sendo percorrido.
+
+> Sintaxe:
+````java
+for (Tipo variavel : arrayOuLista) {
+    // código a ser executado
+}
+````
+Exemplo:
+````java
+int[] numeros = {1, 2, 3, 4, 5};
+
+for (int numero : numeros) {
+    System.out.println(numero);
+}
+````
+
 - for é uma repetição para cada um deles; vai ter uma variável inteira que vai receber o valor dentro de cada passagem e ':'; vai ter 2 elementos, uma váriavel(valor) do tipo int que precisa ter o mesmo tipo do vetor e depois coloca o nome do vetor; a partir de agora a cada laço vai ter uma variável valor que vai ser o valor;
 
   > <img alt="" src="./img/foreach.png">
